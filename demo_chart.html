@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>Demo Charts</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/css/animate.min.css" rel="stylesheet" />
+	<link href="assets/css/style.min.css" rel="stylesheet" />
+	<link href="assets/css/style-responsive.min.css" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+	<!-- ================== END PAGE LEVEL STYLE ================== -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<!-- ================== END BASE JS ================== -->
+	
+	
+</head>
+<body>
+	
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade in page-without-sidebar">
+	
+		<!-- begin #content -->
+		<div id="content" class="content text-inverse f-s-16">
+
+
+			<!-- begin col-12 -->
+			<div class="">
+				<!-- begin panel -->
+				<div class="panel panel-inverse">
+					<div class="panel-body bg-silver-lighter ">
+						<div class="row">
+<div class="col-xs-12">
+  <div class="col-md-5">
+	  <h2 class="f-w-600 text-primary p-b-20">
+	  BENEFITS DELIVERY STRATEGY
+	  </h2>
+	  <p>
+	  You responded XXXXXXXXXXXXX (List of the challenges they picked). See what issues your peers are working through in the graph.
+	  </p>
+	</div>
+	<div class="col-md-7 bg-silver">
+	  <canvas id="barChart"></canvas>
+	</div>
+</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- end panel -->
+			</div>
+			<!-- end col-12 -->
+			<!-- begin col-12 -->
+			<div class="">
+				<!-- begin panel -->
+				<div class="panel panel-inverse">
+
+
+					<div class="panel-body bg-silver-lighter">
+						<div class="row">
+<div class="col-xs-12">
+  <div class="col-md-7 bg-silver">
+      <canvas id="horizontalChart"></canvas>
+    </div>
+    <div class="col-md-5">
+    <h2 class="f-w-600 text-primary p-b-20">
+	  BENEFITS DELIVERY STRATEGY
+	  </h2>
+	  <p>
+	  You responded XXXXXXXXXXXXX (List of the challenges they picked). See what issues your peers are working through in the graph.
+	  </p>
+      
+    </div>
+  </div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- end panel -->
+			</div>
+			<!-- end col-12 -->
+			
+			<!-- begin col-12 -->
+			<div class="">
+				<!-- begin panel -->
+				<div class="panel panel-inverse">
+					<div class="panel-body bg-silver-lighter">
+						<div class="row">
+<div class="col-xs-12">
+  <div class="col-md-5">
+    
+    <h3 class="f-w-600 text-primary p-b-20">
+    WHEN MIGHT YOU CONSIDER CHANGING YOUR SOFTWARE SYSTEM?
+    </h3>
+	<ol type="A">
+	<li style="color:#FF3D67;"> Response: 2-4 Months</li>
+	<li style="color:#059BFF;"> Response: 4-6 Months</li>
+	<li style="color:#22CECE;"> Response: 6-12 Months</li>
+	<li style="color:#FF9124;"> Response: 1 Year+</li>
+	</ol>
+    </div>
+    <div class="col-md-7 bg-silver">
+      <canvas id="pieChart"></canvas>
+    </div>
+  </div>
+							
+						</div>
+
+
+					</div>
+
+				</div>
+				<!-- end panel -->
+			</div>
+			<!-- end col-12 -->
+
+
+		</div>
+		<!-- end #content -->
+
+		
+
+
+		
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
+	
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+	<script>
+		
+
+// Bar chart
+new Chart(document.getElementById("barChart"), {
+    type: 'bar',
+    data: {
+        labels: ["Free", "Fast", "Rapid", "Legacy", "Clean Activity"],
+        datasets: [{
+            label: "Value",
+            backgroundColor: ["#FF3D67", "#059BFF", "#22CECE", "#FFC233", "#FF9124"],
+			borderColor: ["#CC0A34", "#003599", "#008282", "#CC8F00", "#CC5E00"],
+			borderWidth: 2,
+            data: [2478, 5267, 734, 784, 433]
+        }]
+    },
+    options: {
+        responsive: true,
+        legend: {
+            display: false
+        },
+        title: {
+            display: false,
+            text: 'Benefits Delivery Strategy'
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+				barPercentage: 0.8,
+            }],
+            yAxes: [{
+                display: false,
+            }]
+        },
+    }
+});
+
+// horizontalChart chart
+new Chart(document.getElementById("horizontalChart"), {
+    type: 'horizontalBar',
+    data: {
+        labels: ["Free", "Fast", "Rapid", "Legacy", "Clean Activity"],
+        datasets: [{
+            label: "Value",
+            backgroundColor: ["#FF3D67", "#059BFF", "#22CECE", "#FFC233", "#FF9124"],
+			borderColor: ["#CC0A34", "#003599", "#008282", "#CC8F00", "#CC5E00"],
+			borderWidth: 2,
+            data: [2478, 5267, 734, 784, 433]
+        }]
+    },
+    options: {
+        responsive: true,
+        legend: {
+            display: false
+        },
+        title: {
+            display: false,
+            text: 'Benefits Delivery Strategy'
+        },
+        scales: {
+            xAxes: [{
+                display: false
+            }],
+            yAxes: [{
+                display: true,
+				barPercentage: 0.8,
+            }]
+        },
+    }
+});
+
+// pieChart chart
+new Chart(document.getElementById("pieChart"), {
+    type: 'pie',
+    data: {
+        labels: ["2-4 Months", "4-6 Months", "6-12 Months", "1 Year+"],
+        datasets: [{
+            label: "Value",
+            backgroundColor: ["#FF3D67", "#059BFF", "#22CECE", "#FF9124"],
+			borderColor: ["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"],
+			borderWidth: 2,
+            data: [2478, 5267, 734, 784]
+        }]
+    },
+    options: {
+        responsive: true,
+        legend: {
+            display: false
+        },
+        title: {
+            display: false,
+            text: 'Benefits Delivery Strategy'
+        },
+        scales: {
+            xAxes: [{
+                display: false
+            }],
+            yAxes: [{
+                display: false,
+            }]
+        },
+    }
+});
+
+
+
+
+	</script>
+
+</body>
+
+</html>
